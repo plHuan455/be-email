@@ -69,18 +69,18 @@ function LoginContainer() {
           localStorage.setItem('current_role', currentUser.data.role);
           toast.success('Đăng nhập thành công!');
 
-          Notification.requestPermission().then((permission) => {
-            if (permission === 'granted') {
-              console.log('line 28 Notification permission granted.');
-              fetchToken(setTokenFound, setFcmToken);
-            }
-            if (permission === 'default') {
-              console.log('line 28 Notification permission default.');
-            }
-            if (permission === 'denied') {
-              console.log('line 28 Notification permission denied.');
-            }
-          });
+          // Notification.requestPermission().then((permission) => {
+          //   if (permission === 'granted') {
+          //     console.log('line 28 Notification permission granted.');
+          //     fetchToken(setTokenFound, setFcmToken);
+          //   }
+          //   if (permission === 'default') {
+          //     console.log('line 28 Notification permission default.');
+          //   }
+          //   if (permission === 'denied') {
+          //     console.log('line 28 Notification permission denied.');
+          //   }
+          // });
 
           navigate('/');
         }

@@ -73,16 +73,15 @@ function MainWrapper() {
   const [show, setShow] = useState(false);
   const [notification, setNotification] = useState({ title: '', body: '' });
 
-  onMessageListener()
-    .then((payload) => {
-      setNotification({
-        title: payload.notification.title,
-        body: payload.notification.body,
-      });
-      setShow(true);
-      dispatch(unShiftNotificationList(payload.notification));
-    })
-    .catch((err) => console.log('failed', err));
+  // onMessageListener()
+  //   .then((payload) => {
+  //     setNotification({
+  //       title: payload.notification.title,
+  //       body: payload.notification.body,
+  //     });
+  //     setShow(true);
+  //   })
+  //   .catch((err) => console.log('failed', err));
 
   // Hooks
   const { classes, cx } = useStyles();
